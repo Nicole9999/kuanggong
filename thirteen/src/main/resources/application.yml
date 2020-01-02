@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/kg?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: INFO
+      mybatis: ERROR
+    com.kaunggong.demo.mapper : debug
